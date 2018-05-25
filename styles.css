@@ -1,0 +1,20 @@
+.container{
+    width: 500px;
+    height: 500px;
+    border-style: groove;
+    font-size: 30px;
+}
+#timerfield{
+	height: 100px;
+}
+#taskdone {
+	height: 200px;
+	width: 400px;
+	border-color: black;
+	border-style: groove;
+	background-color: #CCC;
+}
+#listbuttons{
+	width: 300px;
+	margin-bottom: 20px;
+}
