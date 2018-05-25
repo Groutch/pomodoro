@@ -3,7 +3,7 @@ var sound =document.createElement("audio");
 sound.src = "quack.mp3";
 
 function Pomodoro() {
-    this.timer=15;
+    this.timer=1500;
     var intervalID;
     var that = this;
     var paused=false;
@@ -40,7 +40,7 @@ function Pomodoro() {
         //Si on arrive à zero on arrete tout
         $(".btplay").prop("disabled",false);
         clearInterval(intervalID);
-        that.timer = 15;
+        that.timer = 1500;
         sound.play();
         //on barre la dernière tache
         var vtaskno=$(".taskno").last().html();
@@ -57,12 +57,12 @@ function Pomodoro() {
         //si on arrete il faut penser à effacer la tache
         //Qu'on a terminé si on a un compteur en cours
         console.log("intervalID: "+intervalID);
-        if(that.timer!=15){
+        if(that.timer!=1500){
             var vtaskno=$(".taskno").last().html();
             $(".taskno").last().remove();
         }
         clearInterval(intervalID);
-        that.timer = 15;
+        that.timer = 1500;
         displayTime(that.timer);
 
     };
